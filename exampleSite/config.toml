@@ -100,7 +100,7 @@ enableInlineShortcodes = true
     #lge = "example96.png"
 
   [params.banner]
-    image = "img/banner.jpg"
+    image = "themes\alpha-church\images\santuary.jpg"
 
 #  [params.style]
 #    googleFonts = ["Cardo", "Crimson+Text", "Merriweather", "Playfair+Display:400,700", "Roboto+Slab"]
