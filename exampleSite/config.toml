@@ -92,7 +92,7 @@ enableInlineShortcodes = true
   bible_version = "CSB" #HCSB, NIV, NLT, ESV, etc.
   instant_page = true
 
-  customCSS = ["example.css"]
+  # customCSS = ["example.css"]
 
   [params.favicon]
     sml = "/example16.png"
