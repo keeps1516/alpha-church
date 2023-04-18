@@ -1,0 +1,13 @@
+{{ define "main" }}
+    {{ "<!-- Main -->" | safeHTML }}
+    <section id="main" class="container">
+        <header>
+            <h2>{{ .Title }}</h2>
+        </header>
+        <div class="box">
+            <div class="row">
+                {{ .Content }}
+            </div>
+        </div>
+    </section>
+{{ end }}
