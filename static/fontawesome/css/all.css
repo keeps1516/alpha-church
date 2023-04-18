@@ -4153,6 +4153,9 @@ readers do not read off random characters that represent icons */
 .fa-rss::before {
   content: "\f09e"; }
 
+.fa-youtube::before {
+    content: "\f167"; }
+
 .fa-feed::before {
   content: "\f09e"; }
 
@@ -4605,6 +4608,9 @@ readers do not read off random characters that represent icons */
 
 .fa-rss-square::before {
   content: "\f143"; }
+
+.fa-youtube-square::before {
+    content: "\f167"; }
 
 .fa-square-share-nodes::before {
   content: "\f1e1"; }
