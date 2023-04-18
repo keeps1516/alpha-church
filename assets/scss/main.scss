@@ -845,6 +845,35 @@
 				}
 			}
 		}
+
+		&.top-icons {
+			cursor: default;
+			list-style: none;
+			padding-left: 0;
+			padding-bottom: 1.25em;
+			border-bottom: none;
+
+			li {
+				display: inline-block;
+				padding: 0 1.25em 0 0;
+
+				&:last-child {
+					padding-right: 0;
+				}
+
+				.icon {
+					color: white;
+
+					&:before {
+						font-size: 1.75em;
+					}
+				}
+
+				a{
+					border-bottom: none;
+				}
+			}
+		}
 	}
 
 	dl {
