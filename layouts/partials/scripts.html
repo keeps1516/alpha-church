@@ -57,6 +57,43 @@
     });
   </script>
 {{ end }}
+<script >
+const carousel = document.querySelector('.carousel');
+const carouselItems = document.querySelectorAll('.carousel-item');
+const slideSpeed = parseInt(carousel.dataset.slideSpeed, 10);
+const autoplay = carousel.dataset.autoplay === 'true';
+let currentIndex = 0;
+let slideInterval;
+
+function showSlide(index) {
+    carouselItems[currentIndex].classList.remove('active');
+    carouselItems[index].classList.add('active');
+    currentIndex = index;
+}
+
+function nextSlide() {
+    let nextIndex = currentIndex + 1;
+    if (nextIndex >= carouselItems.length) {
+        nextIndex = 0;
+    }
+    showSlide(nextIndex);
+}
+
+function previousSlide() {
+    let prevIndex = currentIndex - 1;
+    if (prevIndex < 0) {
+        prevIndex = carouselItems.length - 1;
+    }
+    showSlide(prevIndex);
+}
+
+if (autoplay) {
+    slideInterval = setInterval(nextSlide, slideSpeed);
+    carousel.addEventListener('mouseover', () => clearInterval(slideInterval));
+    carousel.addEventListener('mouseout', () => slideInterval = setInterval(nextSlide, slideSpeed));
+}
+
+</script>
 {{ if .Site.Params.instant_page }}{{ printf "<script src=\"https://instant.page/%s\" type=\"module\" defer integrity=\"%s\" crossorigin=\"anonymous\"></script>" $js.instantpage.version $js.instantpage.integrity | safeHTML }}{{ end }}
 {{ if .Site.GoogleAnalytics }}{{ template "_internal/google_analytics.html" . }}{{ end }}
 </body>
